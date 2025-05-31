@@ -8,16 +8,16 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("Mercurial")
         self.clock = pygame.time.Clock()
-        self.running = True
+        # self.running = True
 
-        self.level = Level
+        self.level = Level()
     
     def run(self):
-        while self.running:
+        while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
-                    self.running = False
+                    # self.running = False
                     sys.exit()
 
             self.screen.fill('black')
